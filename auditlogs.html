@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit Logs</title>
+    <link rel="stylesheet" href="auditlogs.css">
+</head>
+<body>
+<div class="background"></div>
+    <div class="audit-logs-container">
+        <div class="circle-image-container">
+            <img src="careerfitlogo.jpeg" alt="Elevate Your Career">
+        </div>
+        <header>
+            <h1>Audit Logs</h1>
+            <div class="filter-section">
+                <label for="dateFilter">Date:</label>
+                <input type="date" id="dateFilter" onchange="filterLogs()">
+
+                <label for="userFilter">User:</label>
+                <input type="text" id="userFilter" onkeyup="filterLogs()" placeholder="Search by user">
+
+                <label for="actionFilter">Action Type:</label>
+                <select id="actionFilter" onchange="filterLogs()">
+                    <option value="">All Actions</option>
+                    <option value="Create">Create</option>
+                    <option value="Update">Update</option>
+                    <option value="Delete">Delete</option>
+                </select>
+            </div>
+        </header>
+
+        <table class="audit-logs-table">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">Timestamp</th>
+                    <th onclick="sortTable(1)">User</th>
+                    <th onclick="sortTable(2)">Action</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody id="logTableBody">
+                <tr>
+                    <td>2024-09-20 14:30</td>
+                    <td>Admin</td>
+                    <td>Create</td>
+                    <td><button onclick="viewDetails(this)">View Details</button></td>
+                </tr>
+                <tr>
+                    <td>2024-09-19 09:15</td>
+                    <td>User1</td>
+                    <td>Update</td>
+                    <td><button onclick="viewDetails(this)">View Details</button></td>
+                </tr>
+                <tr>
+                    <td>2024-09-18 11:45</td>
+                    <td>User2</td>
+                    <td>Delete</td>
+                    <td><button onclick="viewDetails(this)">View Details</button></td>
+                </tr>
+                <!-- More log entries here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="auditlogs.js"></script>
+</body>
+</html>

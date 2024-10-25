@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="usermgmt.css">
+</head>
+<body>
+<div class="background"></div>
+    <div class="user-management-container">
+        <div class="circle-image-container">
+            <img src="careerfitlogo.jpeg" alt="Elevate Your Career">
+        </div>
+
+        <!-- Header Section -->
+        <header>
+            <h1>User Management</h1>
+            <div class="header-actions">
+                <button class="bulk-action-btn"><p class="import"><a href="importuser.html"> Import Users</a></p></button>
+                <button class="bulk-action-btn"><p class="import"><a href="exportuser.html">Export Users</a></p></button>
+                <input type="text" id="search" placeholder="Search users..." onkeyup="filterUsers()">
+            </div>
+        </header>
+
+        <!-- User Table -->
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">Name</th>
+                    <th onclick="sortTable(1)">Role</th>
+                    <th onclick="sortTable(2)">Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="userTableBody">
+                <tr>
+                    <td>Username 1</td>
+                    <td>Admin</td>
+                    <td class="status-active">Active</td>
+                    <td>
+                        <button class="action-btn edit-btn" onclick="editUser(this)"><p class="import"><a href="importuser.html">Edit</a></p></button>
+                        <button class="action-btn deactivate-btn" onclick="toggleStatus(this)">Deactivate</button>
+                        <button class="action-btn delete-btn" onclick="deleteUser(this)">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Username 2</td>
+                    <td>User</td>
+                    <td class="status-inactive">Inactive</td>
+                    <td>
+                        <button class="action-btn edit-btn" onclick="editUser(this)">Edit</button>
+                        <button class="action-btn deactivate-btn" onclick="toggleStatus(this)">Activate</button>
+                        <button class="action-btn delete-btn" onclick="deleteUser(this)">Delete</button>
+                    </td>
+                </tr>
+                <!-- Add more user rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="usermgmt.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    padding: 30px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #720098;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+h2 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.field {
+    margin: 15px 0;
+    color: white;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="number"], select, textarea {
+    padding: 10px;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.manual-upload, .bulk-upload {
+    display: none;
+    margin-top: 10px;
+}
+
+.actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+textarea[readonly] {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+}
+.circle-image-container {
+    float: right;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.circle-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+.background {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background.jpg'); /* Replace with your image */
+    background-size: cover;
+    filter: blur(8px); /* Adjust blur intensity */
+    z-index: -1; /* Send background behind content */
+}

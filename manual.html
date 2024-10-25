@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Question Upload</title>
+    <link rel="stylesheet" href="manual.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="upload-container">
+        <div class="circle-image-container">
+            <img src="careerfitlogo.jpeg" alt="Elevate Your Career">
+        </div>
+        <h2>Manual Question Upload</h2>
+        <form id="questionForm">
+            <div class="input-group">
+                <label for="questionText">Question Text:</label>
+                <textarea id="questionText" name="questionText" required></textarea>
+            </div>
+            
+            <div class="input-group">
+                <label for="option1">Option 1:</label>
+                <input type="text" id="option1" name="option1" required>
+            </div>
+            <div class="input-group">
+                <label for="option2">Option 2:</label>
+                <input type="text" id="option2" name="option2" required>
+            </div>
+            <div class="input-group">
+                <label for="option3">Option 3:</label>
+                <input type="text" id="option3" name="option3" required>
+            </div>
+            <div class="input-group">
+                <label for="option4">Option 4:</label>
+                <input type="text" id="option4" name="option4" required>
+            </div>
+
+            <div class="input-group">
+                <label for="answer">Correct Answer:</label>
+                <select id="answer" name="answer" required>
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                    <option value="option4">Option 4</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="category">Category:</label>
+                <input type="text" id="category" name="category">
+            </div>
+
+            <button type="submit">Add Question</button>
+        </form>
+
+        <div class="bulk-upload">
+            <h3>Bulk Upload</h3>
+            <input type="file" id="bulkUpload" accept=".csv, .xls, .xlsx">
+            <button id="bulkUploadButton">Upload</button>
+        </div>
+
+        <div class="preview">
+            <h3>Preview Questions</h3>
+            <table id="previewTable">
+                <thead>
+                    <tr>
+                        <th>Question</th>
+                        <th>Options</th>
+                        <th>Answer</th>
+                        <th>Category</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Preview questions will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="manual.js"></script>
+</body>
+</html>

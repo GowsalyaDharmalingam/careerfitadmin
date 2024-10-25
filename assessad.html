@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Management</title>
+    <link rel="stylesheet" href="assess.css">
+</head>
+<body>
+
+    <div class="assessment-management-container">
+        <div class="circle-image-container">
+            <img src="careerfitlogo.jpeg" alt="Elevate Your Career">
+        </div>
+
+        <!-- Header Section -->
+        <header>
+            <h1>Assessment Management</h1>
+            <div class="header-actions">
+                <button class="bulk-action-btn"><P class="create"><a href="assesscreate.html">Create Assessment</a></P></button>
+                <button class="bulk-action-btn" onclick="archiveSelected()">Archive Selected</button>
+                <button class="bulk-action-btn" onclick="deleteSelected()">Delete Selected</button>
+                <input type="text" id="search" placeholder="Search assessments..." onkeyup="filterAssessments()">
+            </div>
+        </header>
+
+        <!-- Assessment Table -->
+        <table class="assessment-table">
+            <thead>
+                <tr>
+                    <th><input type="checkbox" onclick="selectAll(this)"></th>
+                    <th onclick="sortTable(1)">Title</th>
+                    <th onclick="sortTable(2)">Status</th>
+                    <th onclick="sortTable(3)">Date Created</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="assessmentTableBody">
+                <tr>
+                    <td><input type="checkbox" class="select-assessment"></td>
+                    <td>Math Assessment</td>
+                    <td class="status-active">Active</td>
+                    <td>2024-09-15</td>
+                    <td>
+                        <button class="action-btn edit-btn" onclick="editUser(this)"><p class="create"><a href="assesscreate.html">Edit</a></p></button>
+                        <button class="action-btn delete-btn" onclick="deleteAssessment(this)">Delete</button>
+                        <button class="action-btn view-btn"><P class="create"><a href="result.html">View Results</a></P></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="select-assessment"></td>
+                    <td>Science Assessment</td>
+                    <td class="status-archived">Archived</td>
+                    <td>2024-08-30</td>
+                    <td>
+                        <button class="action-btn edit-btn">Edit</button>
+                        <button class="action-btn delete-btn" onclick="deleteAssessment(this)">Delete</button>
+                        <button class="action-btn view-btn">View Results</button>
+                    </td>
+                </tr>
+                <!-- Add more assessment rows here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="assess.js"></script>
+</body>
+</html>

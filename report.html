@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports and Analytics</title>
+    <link rel="stylesheet" href="report.css">
+    <!-- Include Chart.js for generating charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="background"></div>
+    <div class="reports-container">
+        <div class="circle-image-container">
+            <img src="careerfitlogo.jpeg" alt="Elevate Your Career">
+        </div>
+
+        <!-- Header Section -->
+        <header>
+            <h1>Reports & Analytics</h1>
+        </header>
+
+        <!-- Summary Section -->
+        <section class="summary-section">
+            <h2>System & User Activity Summary</h2>
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <h3>Total Assessments</h3>
+                    <p id="totalAssessments">120</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Active Users</h3>
+                    <p id="activeUsers">350</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Assessments Completed</h3>
+                    <p id="completedAssessments">95%</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Proctoring Issues</h3>
+                    <p id="proctoringIssues">2%</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Analytics Section -->
+        <section class="analytics-section">
+            <h2>Performance Metrics & Analytics</h2>
+            <div class="chart-container">
+                <canvas id="performanceChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Reports Section -->
+        <section class="reports-section">
+            <h2>Detailed Reports</h2>
+            <div class="report-options">
+                <button onclick="exportReport('pdf')">Export PDF</button>
+                <button onclick="exportReport('excel')">Export Excel</button>
+            </div>
+
+            <table class="report-table">
+                <thead>
+                    <tr>
+                        <th>Assessment Title</th>
+                        <th>Total Participants</th>
+                        <th>Average Score</th>
+                        <th>Proctoring Issues</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Math Assessment</td>
+                        <td>120</td>
+                        <td>80%</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Science Assessment</td>
+                        <td>90</td>
+                        <td>75%</td>
+                        <td>1</td>
+                    </tr>
+                    <!-- More report rows here -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="report.js"></script>
+</body>
+</html>

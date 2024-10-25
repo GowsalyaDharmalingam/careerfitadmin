@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Proctoring Configuration</title>
+    <link rel="stylesheet" href="AIProc.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <div class="circle-image-container">
+            <img src="careerfitlogo.jpeg" alt="Elevate Your Career">
+        </div>
+        <h1>AI Proctoring Configuration</h1>
+
+        <form id="proctoringConfigForm">
+            <div class="form-group">
+                <label for="webcam">Enable Webcam:</label>
+                <input type="checkbox" id="webcam" name="webcam" checked>
+            </div>
+
+            <div class="form-group">
+                <label for="microphone">Enable Microphone:</label>
+                <input type="checkbox" id="microphone" name="microphone" checked>
+            </div>
+
+            <div class="form-group">
+                <label for="screenRecording">Enable Screen Recording:</label>
+                <input type="checkbox" id="screenRecording" name="screenRecording" checked>
+            </div>
+
+            <div class="form-group">
+                <label for="proctoringRules">Proctoring Rules:</label>
+                <textarea id="proctoringRules" name="proctoringRules" rows="4" placeholder="Enter proctoring rules and guidelines..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="aiToolIntegration">AI Tool Integration:</label>
+                <select id="aiToolIntegration" name="aiToolIntegration">
+                    <option value="tool1">AI Tool 1</option>
+                    <option value="tool2">AI Tool 2</option>
+                    <option value="tool3">AI Tool 3</option>
+                </select>
+            </div>
+
+            <button type="submit">Save Configuration</button>
+        </form>
+
+        <div id="statusIndicator" class="status hidden">
+            <span id="statusText"></span>
+        </div>
+    </div>
+
+    <script src="AIProc.js"></script>
+</body>
+</html>

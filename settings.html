@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Settings</title>
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+<div class="background"></div>
+    <div class="settings-container">
+        <div class="circle-image-container">
+            <img src="careerfitlogo.jpeg" alt="Elevate Your Career">
+        </div>
+        <header>
+            <h1>System Settings</h1>
+        </header>
+
+        <div class="settings-section">
+            <h2>Branding</h2>
+            <form id="brandingForm">
+                <label for="logo">Upload Logo:</label>
+                <input type="file" id="logo" name="logo"><br>
+
+                <label for="themeColor">Theme Color:</label>
+                <input type="color" id="themeColor" name="themeColor"><br>
+
+                <button type="submit" class="save-btn">Save Branding Settings</button>
+            </form>
+        </div>
+
+        <div class="settings-section">
+            <h2>Email Templates</h2>
+            <form id="emailTemplateForm">
+                <label for="welcomeEmail">Welcome Email Template:</label>
+                <textarea id="welcomeEmail" name="welcomeEmail" rows="4" cols="50"></textarea><br>
+
+                <label for="resetPasswordEmail">Reset Password Template:</label>
+                <textarea id="resetPasswordEmail" name="resetPasswordEmail" rows="4" cols="50"></textarea><br>
+
+                <button type="submit" class="save-btn">Save Email Templates</button>
+            </form>
+        </div>
+
+        <div class="settings-section">
+            <h2>Notifications</h2>
+            <form id="notificationForm">
+                <label>
+                    <input type="checkbox" id="enableNotifications" name="enableNotifications">
+                    Enable Notifications
+                </label><br>
+
+                <label for="notificationEmail">Notification Email:</label>
+                <input type="email" id="notificationEmail" name="notificationEmail"><br>
+
+                <button type="submit" class="save-btn">Save Notification Settings</button>
+            </form>
+        </div>
+
+        <div class="settings-section">
+            <h2>User Roles and Permissions</h2>
+            <form id="userRolesForm">
+                <label for="adminRole">Admin Role Permissions:</label>
+                <textarea id="adminRole" name="adminRole" rows="4" cols="50"></textarea><br>
+
+                <label for="userRole">User Role Permissions:</label>
+                <textarea id="userRole" name="userRole" rows="4" cols="50"></textarea><br>
+
+                <button type="submit" class="save-btn">Save User Roles</button>
+            </form>
+        </div>
+
+        <div class="settings-section">
+            <h2>Integrations and API Settings</h2>
+            <form id="apiSettingsForm">
+                <label for="apiKey">API Key:</label>
+                <input type="text" id="apiKey" name="apiKey"><br>
+
+                <label for="apiEndpoint">API Endpoint:</label>
+                <input type="text" id="apiEndpoint" name="apiEndpoint"><br>
+
+                <button type="submit" class="save-btn">Save API Settings</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="settings.js"></script>
+</body>
+</html>

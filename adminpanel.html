@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="adminpanel.css">
+    <style>
+        body {
+          background-image: url('Ai4.webp');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+        </style>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <div class="circle-image-container">
+            <img src="careerfitlogo.jpeg" alt="Elevate Your Career">
+        </div>
+        <nav class="sidebar">
+            <h2>Admin Panel</h2>
+            <ul>
+                <li><a href="#" class="active">Dashboard</a></li>
+                <li><p><a href="usermgmt.html">Users</a></p></li>
+                <li><p><a href="assess.html">Assessments</a></p></li>
+                <li><p><a href="report.html">Reports</a></p></li>
+                <li><p><a href="settings.html">Settings</a></p></li>
+                <li><p><a href="auditlogs.html">Auditlogs</a></p></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <header>
+                <h1>Dashboard Overview</h1>
+                <div class="header-actions">
+                    <button class="action-btn"><p class="user"><a href="usermgmt.html">Add User</a></p></button>
+                    <button class="action-btn"><p class="user"><a href="assesscreate.html">Create Assessment</a></p></button>
+                </div>
+            </header>
+
+            <!-- Key Metrics and System Status -->
+            <section class="metrics">
+                <div class="metric-box">
+                    <h3>Total Users</h3>
+                    <p>1,250</p>
+                </div>
+                <div class="metric-box">
+                    <h3>Active Assessments</h3>
+                    <p>45</p>
+                </div>
+                <div class="metric-box">
+                    <h3>System Status</h3>
+                    <p class="status-ok">All Systems Operational</p>
+                </div>
+                <div class="metric-box">
+                    <h3>Pending Reports</h3>
+                    <p>7</p>
+                </div>
+            </section>
+
+            <!-- Recent Activity Feed -->
+            <section class="activity-feed">
+                <h2>Recent Activity</h2>
+                <ul>
+                    <li>John Doe added a new user account.</li>
+                    <li>Assessment "Math Test" was created by Admin.</li>
+                    <li>System update completed successfully.</li>
+                    <li>Report generated for "User Engagement".</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+</body>
+</html>
